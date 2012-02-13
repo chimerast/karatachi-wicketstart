@@ -6,7 +6,21 @@
 </head>
 <body>
 <wicket:extend>
-
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>グローバルID</th>
+      <th>名前</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr wicket:id="companies">
+      <td wicket:id="id"></td>
+      <td wicket:id="name"></td>
+    </tr>
+  </tbody>
+</table>
+<div wicket:id="navigator"></div>
 </wicket:extend>
 </body>
 </html>

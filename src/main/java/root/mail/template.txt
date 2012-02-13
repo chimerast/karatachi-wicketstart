@@ -1,5 +1,0 @@
->>SEND_FILE
-Subject:ファイル送信 - $FILENAME
-
-ファイルが送信されました。
-<<

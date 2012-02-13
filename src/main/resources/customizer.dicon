@@ -7,13 +7,6 @@
   <component name="daoCustomizer"
     class="org.seasar.framework.container.customizer.CustomizerChain">
     <initMethod name="addCustomizer">
-      <arg>
-        <component class="org.seasar.framework.container.customizer.AspectCustomizer">
-          <property name="interceptorName">"daoLoggingInterceptor"</property>
-        </component>
-      </arg>
-    </initMethod>
-    <initMethod name="addCustomizer">
       <arg>s2DaoCustomizer</arg>
     </initMethod>
   </component>

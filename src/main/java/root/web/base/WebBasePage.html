@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title wicket:id="title" />
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Project name</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">ユーザ管理</a></li>
+            <li><a href="#">コンテンツ管理</a></li>
+            <li><a href="#">便利ツール</a></li>
+            <li><a href="#">レポートトランザクション</a></li>
+            <li><a href="#">インターン</a></li>
+            <li><a href="#">請求書</a></li>
+          </ul>
+          <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3">
+        <div class="well sidebar-nav">
+          <ul class="nav nav-list">
+            <li class="nav-header">ユーザ管理</li>
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="nav-header">コンテンツ管理</li>
+            <li><a href="#">Link</a></li>
+            <li class="nav-header">便利ツール</li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="span9">
+        <wicket:child />
+      </div>
+    </div>
+    <hr />
+    <footer>
+      <p>&copy; Company 2012</p>
+    </footer>
+  </div>
+</body>
+</html>
