@@ -2,19 +2,18 @@ package root.dao;
 
 import java.util.List;
 
+import org.seasar.dao.annotation.tiger.Arguments;
 import org.seasar.dao.annotation.tiger.Query;
 import org.seasar.dao.annotation.tiger.S2Dao;
-import org.seasar.dao.annotation.tiger.Sql;
-import org.seasar.dao.pager.PagerCondition;
 
 import root.entity.CorpBss;
 
 @S2Dao(bean = CorpBss.class)
 public interface CorpBssDao {
 
-    @Query("ORDER BY global_id")
-    public List<CorpBss> selectPage(PagerCondition condition);
+    @Arguments("global_id")
+    public CorpBss select(String globalId);
 
-    @Sql("SELECT count(*) FROM corp_bss")
-    public int count();
+    @Query("corp_frml_name_vch LIKE CONCAT('%', ? , '%') LIMIT 10")
+    public List<CorpBss> selectByName(String name);
 }

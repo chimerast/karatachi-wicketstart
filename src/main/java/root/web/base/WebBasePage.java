@@ -7,7 +7,11 @@ import org.apache.wicket.markup.html.IHeaderContributor;
 import org.apache.wicket.markup.html.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.model.IModel;
+
+import root.web.IndexPage;
+import root.web.SearchPage;
 
 public abstract class WebBasePage extends WebPage implements IHeaderContributor {
     private static final long serialVersionUID = 1L;
@@ -53,6 +57,9 @@ public abstract class WebBasePage extends WebPage implements IHeaderContributor 
 
     private void commonInit() {
         add(new Label("title", getPageTitle()));
+
+        add(new BookmarkablePageLink<Void>("index", IndexPage.class));
+        add(new BookmarkablePageLink<Void>("search", SearchPage.class));
     }
 
     protected String getPageTitle() {

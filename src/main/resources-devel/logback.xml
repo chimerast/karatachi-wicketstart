@@ -6,6 +6,16 @@
     </encoder>
   </appender>
 
+  <logger name="org.seasar.extension.jdbc">
+    <level value="DEBUG" />
+  </logger>
+  <logger name="org.seasar.extension.dbcp">
+    <level value="DEBUG" />
+  </logger>
+  <logger name="org.seasar.extension.jta">
+    <level value="DEBUG" />
+  </logger>
+
   <root>
     <level value="ERROR" />
     <appender-ref ref="STDOUT" />

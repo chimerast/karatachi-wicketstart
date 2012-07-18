@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<wicket:extend>
+  <form wicket:id="form" class="well form-search">
+    <label>Search keyword</label>
+    <input type="text" wicket:id="keyword" class="span3" placeholder="Type keyword…" />
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Global ID</th>
+        <th>Company Name</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr wicket:id="results">
+        <td wicket:id="globalId"></td>
+        <td wicket:id="corpFrmlNameVch"></td>
+        <td><a href="#" wicket:id="link">リンク</a></td>
+      </tr>
+    </tbody>
+  </table>
+</wicket:extend>
+</body>
+</html>
