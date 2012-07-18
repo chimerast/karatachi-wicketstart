@@ -37,10 +37,7 @@ public class SearchPage extends WebBasePage {
 
                     @Override
                     protected List<CorpBss> load() {
-                        System.out.println(keyword);
-                        List<CorpBss> ret = corpBssDao.selectByName(keyword);
-                        System.out.println(ret);
-                        return ret;
+                        return corpBssDao.selectByName(keyword);
                     }
                 };
 
@@ -53,8 +50,10 @@ public class SearchPage extends WebBasePage {
                 item.add(new Label("corpFrmlNameVch"));
 
                 CorpBss corpBss = item.getModelObject();
+
                 PageParameters parameters = new PageParameters();
                 parameters.add("global_id", corpBss.globalId);
+
                 item.add(new BookmarkablePageLink<Void>("link",
                         IndexPage.class, parameters));
             }
