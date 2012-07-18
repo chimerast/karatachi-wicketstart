@@ -1,9 +1,7 @@
 package root.web;
 
 import org.apache.wicket.PageParameters;
-import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.model.CompoundPropertyModel;
 import org.seasar.framework.container.annotation.tiger.Binding;
 
 import root.dao.CorpBssDao;
@@ -25,12 +23,8 @@ public class IndexPage extends WebBasePage {
         // search a company from db
         CorpBss corpBss = corpBssDao.select(globalId);
 
-        WebMarkupContainer company;
-        add(company = new WebMarkupContainer("company"));
-        company.setDefaultModel(new CompoundPropertyModel<CorpBss>(corpBss));
-
-        company.add(new Label("globalId"));
-        company.add(new Label("corpFrmlNameVch"));
-        company.add(new Label("adrsVch"));
+        add(new Label("globalId", corpBss.globalId));
+        add(new Label("corpFrmlNameVch", corpBss.corpFrmlNameVch));
+        add(new Label("adrsVch", corpBss.adrsVch));
     }
 }
